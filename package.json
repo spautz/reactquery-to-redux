@@ -25,7 +25,7 @@
     "LICENSE",
     "*.md"
   ],
-  "source": "src/index.tsx",
+  "source": "src/index.ts",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
   "umd:main": "dist/index.umd.js",
@@ -92,6 +92,9 @@
     "prettier": "2.3.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-query": "3.18.1",
+    "react-redux": "7.2.4",
+    "redux": "4.1.0",
     "rimraf": "3.0.2",
     "standard-version": "9.3.0",
     "ts-jest": "27.0.3",
