@@ -1,14 +1,14 @@
 {
-  "name": "@spautz/package-template",
+  "name": "reactquery-to-redux",
   "version": "0.0.1",
-  "description": "My opinionated template for a single-package repo",
+  "description": "Sync your React Query state to Redux",
   "keywords": [],
   "license": "MIT",
-  "homepage": "https://github.com/spautz/package-template#readme",
-  "bugs": "https://github.com/spautz/package-template/issues",
+  "homepage": "https://github.com/spautz/reactquery-to-redux#readme",
+  "bugs": "https://github.com/spautz/reactquery-to-redux/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/spautz/package-template.git"
+    "url": "https://github.com/spautz/reactquery-to-redux.git"
   },
   "author": {
     "name": "Steven Pautz",
@@ -19,10 +19,8 @@
     "tag": "next"
   },
   "files": [
-    "bin/",
     "dist/",
     "legacy-types/",
-    "lib-dist/",
     "src/",
     "LICENSE",
     "*.md"
