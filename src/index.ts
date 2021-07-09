@@ -1,4 +1,7 @@
 export * from './SyncReactQueryToRedux';
+export * from './options';
+export * from './reactQueryToReduxReducer';
+export * from './useSyncReactQueryToRedux';
 
 export * from './options';
 
