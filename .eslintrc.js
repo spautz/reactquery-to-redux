@@ -20,6 +20,7 @@ module.exports = {
   ],
 
   ignorePatterns: [
+    'demos/',
     '!.storybook/',
     'build/',
     'coverage/',
