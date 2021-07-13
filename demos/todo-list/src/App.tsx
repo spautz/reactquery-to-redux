@@ -1,11 +1,9 @@
 import React, { ReactElement } from 'react';
 
-import { defaultOptions } from 'reactquery-to-redux';
-
-console.log('defaultOptions = ', defaultOptions);
+import { options } from 'reactquery-to-redux';
 
 function App(): ReactElement {
-  return <div>TODO: Todos, {JSON.stringify(defaultOptions)}</div>;
+  return <div>TODO: Todos, {JSON.stringify(options)}</div>;
 }
 
-export default App;
+export { App };

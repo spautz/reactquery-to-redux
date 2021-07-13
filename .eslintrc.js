@@ -4,7 +4,7 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'react'],
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'react-app', 'prettier'],
 
   rules: {
     'react/jsx-uses-react': 'error',
@@ -20,7 +20,6 @@ module.exports = {
   ],
 
   ignorePatterns: [
-    'demos/',
     '!.storybook/',
     'build/',
     'coverage/',

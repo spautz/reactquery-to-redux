@@ -3,8 +3,6 @@ const resolveFrom = require('resolve-from');
 
 const packageJson = require('./package.json');
 
-console.log('packageJson = ', packageJson);
-
 function addAliasForLocalPackage(packageName) {
   try {
     const aliasName = `${packageName}\$`;
@@ -22,12 +20,8 @@ const aliases = {
   'reactquery-to-redux$': resolveFrom(path.resolve('../..'), '.'),
 };
 
-console.log('aliases = ', aliases);
-
 Object.keys(packageJson.dependencies).map(addAliasForLocalPackage);
 Object.keys(packageJson.devDependencies).map(addAliasForLocalPackage);
-
-console.log('aliases = ', aliases);
 
 // Based on https://gist.github.com/tannerlinsley/4778cf30d66530ea9802899168119ec0
 const fixLinkedDependencies = (config) => {
