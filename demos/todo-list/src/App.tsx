@@ -1,9 +1,25 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
+import { Provider } from 'react-redux';
+import { QueryClientProvider } from 'react-query';
 
-import { options } from 'reactquery-to-redux';
+import { IntroHeader } from './IntroHeader';
+import { ReactQueryOnly, queryClient } from './react-query-only';
+import { ReactQueryThroughRedux, store } from './react-query-through-redux';
 
 function App(): ReactElement {
-  return <div>TODO: Todos, {JSON.stringify(options)}</div>;
+  return (
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <IntroHeader />
+
+        <h3>React Query</h3>
+        <ReactQueryOnly />
+
+        <h3>Redux</h3>
+        <ReactQueryThroughRedux />
+      </QueryClientProvider>
+    </Provider>
+  );
 }
 
 export { App };

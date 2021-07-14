@@ -14,8 +14,15 @@ export interface ReactQueryToReduxOptions {
   /**
    * Controls whether changes to the Redux state will flow back to React Query.
    * You probably do not need or want this option.
+   *
+   * @TODO: Either implement this or remove it
    */
-  writeEnabled: boolean;
+  // writeEnabled: boolean;
+
+  /**
+   * The path in the Redux store where React Query data will be sent to and selected from.
+   */
+  reduxKey: string;
 
   /**
    * Determines the data format that gets sent to Redux from React Query for each query and mutation:
@@ -49,7 +56,8 @@ const FORMAT_KEYSONLY = 'FORMAT_KEYSONLY' as const;
 
 const defaultOptions: Readonly<ReactQueryToReduxOptions> = {
   readEnabled: true,
-  writeEnabled: false,
+  // writeEnabled: false,
+  reduxKey: 'fromReactQuery',
   format: FORMAT_DEHYDRATED,
 };
 
