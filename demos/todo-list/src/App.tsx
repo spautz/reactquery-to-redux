@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import { Provider } from 'react-redux';
 import { QueryClientProvider } from 'react-query';
 

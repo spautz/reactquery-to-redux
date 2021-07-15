@@ -4,9 +4,9 @@ import { render } from '@testing-library/react';
 import { App } from '../App';
 
 describe('App', () => {
-  it('renders a placeholder', () => {
+  it('renders', () => {
     const { getByText } = render(<App />);
 
-    expect(getByText(/TODO: Todos/)).toBeInTheDocument();
+    expect(getByText(/React Query to Redux/)).toBeInTheDocument();
   });
 });

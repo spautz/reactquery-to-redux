@@ -1,7 +1,13 @@
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
+import { AddTodo, TodoList } from './components';
 
 const ReactQueryOnly = (): ReactElement => {
-  return <p>ReactQueryOnly</p>;
+  return (
+    <>
+      <AddTodo />
+      <TodoList />
+    </>
+  );
 };
 
 export { ReactQueryOnly };

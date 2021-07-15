@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 const IntroHeader = (): ReactElement => {
   return (
@@ -17,6 +17,10 @@ const IntroHeader = (): ReactElement => {
           Redux Devtools extension
         </a>{' '}
         to watch the Redux state.
+      </p>
+      <p>
+        This is intentionally slowed down and de-optimized -- without optimistic updates -- so that
+        you can watch transitions and mutations happen step-by-step.
       </p>
       <p>
         <a
