@@ -1,14 +1,49 @@
 {
-  "name": "demo--todo-list",
+  "name": "reactquery-to-redux-demo--todo-list",
   "version": "0.0.1",
   "private": true,
+  "description": "Sync your React Query state to Redux",
+  "license": "MIT",
+  "bugs": "https://github.com/spautz/reactquery-to-redux/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spautz/reactquery-to-redux.git",
+    "directory": "demos/todo-list"
+  },
+  "author": {
+    "name": "Steven Pautz",
+    "url": "http://stevenpautz.com/"
+  },
+  "source": "src/index.ts",
+  "scripts": {
+    "____ INTEGRATION ___________________________________________________": "",
+    "clean": "yon run build:clean && yon run test:clean && rimraf ./node_modules/.cache/ *.log",
+    "dev": "yon run types && yon run lint",
+    "all": "yon run clean && yon run dev && yon run test:coverage && yon run build",
+    "all:readonly": "yon run dev && yon run test:coverage",
+    "____ ALIASES _______________________________________________________": "",
+    "build": "yon run build:clean && yon run build:main",
+    "start": "yon run start:localdev",
+    "test": "yon run test:coverage",
+    "____ INDIVIDUAL COMMANDS ___________________________________________": "",
+    "build:clean": "rimraf ./dist ./legacy-types",
+    "build:main": "rescripts build",
+    "lint": "eslint .",
+    "start:localdev": "rescripts start",
+    "test:clean": "rimraf ./coverage",
+    "test:coverage": "yon run test:clean && rescripts test --coverage=true --watch=false --watchAll=false",
+    "test:nowatch": "yon run test:clean && rescripts test --coverage=false --watch=false --watchAll=false --bail",
+    "test:watch": "yon run test:clean && rescripts test --coverage=false --watch=true",
+    "test:watchcoverage": "yon run test:clean && rescripts test --coverage --watchAll=true",
+    "types": "tsc --noEmit --p tsconfig.json"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.18.1",
     "react-redux": "^7.2.4",
-    "reactquery-to-redux": "file:.yalc/reactquery-to-redux",
+    "reactquery-to-redux": "file:../..",
     "redux": "^4.1.0"
   },
   "devDependencies": {
@@ -20,12 +55,8 @@
     "react-scripts": "4.0.3",
     "redux-devtools-extension": "^2.13.9",
     "typescript": "^4.1.2",
-    "web-vitals": "^2.1.0"
-  },
-  "scripts": {
-    "start": "rescripts start",
-    "build": "rescripts build",
-    "test": "rescripts test"
+    "web-vitals": "^2.1.0",
+    "yarn-or-npm": "^3.0.1"
   },
   "browserslist": {
     "production": [
@@ -38,5 +69,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://spautz.github.io/reactquery-to-redux/"
 }

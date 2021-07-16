@@ -1,12 +1,9 @@
 /* eslint-env node */
-
 module.exports = {
   preset: 'ts-jest',
-  roots: ['<rootDir>/src/', '<rootDir>/demos/todo-list/'],
+  roots: ['<rootDir>/src/'],
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['/__tests__/_.*', '/node_modules/'],
-
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  testPathIgnorePatterns: ['/node_modules/'],
 
   collectCoverage: true,
   coverageReporters: ['json', 'html', 'lcov'],

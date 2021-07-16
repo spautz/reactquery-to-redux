@@ -1,7 +1,13 @@
 import React, { ReactElement } from 'react';
+import { SyncReactQueryToRedux } from 'reactquery-to-redux';
 
 const ReactQueryThroughRedux = (): ReactElement => {
-  return <p>ReactQueryThroughRedux</p>;
+  return (
+    <>
+      <SyncReactQueryToRedux />
+      App goes here
+    </>
+  );
 };
 
 export { ReactQueryThroughRedux };

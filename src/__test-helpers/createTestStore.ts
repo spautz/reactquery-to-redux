@@ -1,7 +1,7 @@
 import { AnyAction, Store, createStore, combineReducers } from 'redux';
 
-import { ReduxState } from '../../internals';
-import { reactQueryToReduxReducer } from '../../reactQueryToReduxReducer';
+import { ReduxState } from '../internals';
+import { reactQueryToReduxReducer } from '../reactQueryToReduxReducer';
 
 const VALUE1_DEFAULT = 100;
 const VALUE2_DEFAULT = 200;

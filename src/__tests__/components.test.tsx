@@ -7,15 +7,22 @@ import { render } from '@testing-library/react';
 import { reduxStoreRef } from '../internals';
 import { SyncReactQueryToRedux } from '../SyncReactQueryToRedux';
 
-import { createTestStore } from './_helpers';
+import { createTestStore } from '../__test-helpers';
 
 describe('read React-Query state through Redux', () => {
   let testStore: Store;
+  const originalConsoleError: typeof console.error = console.error;
+  const originalConsoleWarn: typeof console.warn = console.warn;
+
   beforeEach(() => {
     jest.restoreAllMocks();
     jest.resetModules();
 
     testStore = createTestStore();
+  });
+  afterEach(() => {
+    console.error = originalConsoleError;
+    console.warn = originalConsoleWarn;
   });
 
   it('needs to be within a Redux context', () => {

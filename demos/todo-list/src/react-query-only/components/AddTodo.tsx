@@ -40,8 +40,6 @@ const AddTodo = (): ReactElement => {
       )}
     </div>
   );
-
-  return <div>(AddTodo)</div>;
 };
 
 export { AddTodo };
